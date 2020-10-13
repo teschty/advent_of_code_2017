@@ -12,28 +12,6 @@ def part1(sequence):
     big_sequence = str(sequence) * 2
     total = [int(num) for i, num in enumerate(str(sequence)) if num == str(big_sequence)[i + 1]]
     return "Total: {}".format(sum(total))
-   
-    # # list is circular. ---(if the last and first digita are the same, add them... to the total)
-
-    # # I had an idea for a 'cute' solution. It gets weird.
-    # # Apparently not efficent. However, great example for understandability --- me thinks.
-    # check_list = []
-    # total = 0
-
-    # for i, num in enumerate(str(sequence)):
-    #     try:
-    #         check_list.append([num, str(sequence)[i + 1]])
-    #     except IndexError:  # reeeee off by one!!!!
-    #         check_list[-1] = [num, str(sequence)[0]]
-
-    # # print("List before number checking:", check_list)
-
-    # for check_pair in check_list:
-    #     if check_pair[0] == check_pair[1]:
-    #         # print("Matching! {} & {}".format(check_pair[0], check_pair[1]))
-    #         total += int(check_pair[0])
-
-    # print("Total:", total)
 
 
 def part2(sequence):
