@@ -36,7 +36,7 @@ def part2():
             for pair in possibles:
                 # print(pair, max(pair) / min(pair))
                 if max(pair) % min(pair) == 0:
-                    total += (max(pair) / min(pair))
+                    total += max(pair) / min(pair)
 
         return int(total)
 
